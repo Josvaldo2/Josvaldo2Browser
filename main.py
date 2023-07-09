@@ -19,7 +19,7 @@ class JonsoBrowser(qw.QMainWindow):
         self.layout = qw.QVBoxLayout()
         self.horizontal = qw.QHBoxLayout()
 
-        self.barraUrl = qw.QPlainTextEdit()
+        self.barraUrl = qw.QLineEdit()
         self.barraUrl.setMaximumHeight(30)
 
         self.irBotao = qw.QPushButton('ir')
@@ -40,8 +40,8 @@ class JonsoBrowser(qw.QMainWindow):
         self.layout.addWidget(self.telaSite)
         self.telaSite.setUrl(QUrl.fromLocalFile(arquivoRelativo("JosvaldoSearch.html")))
 
-        def mudarDeSite(self):
-            url = self.barraUrl.toPlainText()
+        def mudarDeSite():
+            url = self.barraUrl.text()
             urlP = urlparse(url)
             if not urlP.scheme:
                 url = f"https://google.com/search?q={url}"
@@ -50,7 +50,8 @@ class JonsoBrowser(qw.QMainWindow):
         self.janela.setLayout(self.layout)
         self.janela.show()
 
-        self.irBotao.clicked.connect(lambda: mudarDeSite(self))
+        self.irBotao.clicked.connect(mudarDeSite)
+        self.barraUrl.returnPressed.connect(mudarDeSite)
         self.voltarBotao.clicked.connect(self.telaSite.back)
         self.avancarBotao.clicked.connect(self.telaSite.forward)
 
