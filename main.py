@@ -2,8 +2,11 @@ from PyQt5 import QtWidgets as qw
 from PyQt5.QtWebEngineWidgets import QWebEngineView
 from PyQt5.QtCore import QUrl
 from PyQt5.QtGui import QIcon
-from os.path import abspath
+from os.path import dirname
 from urllib.parse import urlparse
+
+def arquivoRelativo(f):
+    return f"{dirname(__file__)}/{f}"
 
 class JonsoBrowser(qw.QMainWindow):
     def __init__(self):
@@ -11,7 +14,7 @@ class JonsoBrowser(qw.QMainWindow):
 
         self.janela = qw.QWidget()
         self.janela.setWindowTitle("Josvaldo Browser")
-        self.janela.setWindowIcon(QIcon("EpicFace.png"))
+        self.janela.setWindowIcon(QIcon(arquivoRelativo("EpicFace.png")))
 
         self.layout = qw.QVBoxLayout()
         self.horizontal = qw.QHBoxLayout()
@@ -35,7 +38,7 @@ class JonsoBrowser(qw.QMainWindow):
 
         self.layout.addLayout(self.horizontal)
         self.layout.addWidget(self.telaSite)
-        self.telaSite.setUrl(QUrl.fromLocalFile(abspath('JosvaldoSearch.html')))
+        self.telaSite.setUrl(QUrl.fromLocalFile(arquivoRelativo("JosvaldoSearch.html")))
 
         def mudarDeSite(self):
             url = self.barraUrl.toPlainText()
@@ -51,7 +54,6 @@ class JonsoBrowser(qw.QMainWindow):
         self.voltarBotao.clicked.connect(self.telaSite.back)
         self.avancarBotao.clicked.connect(self.telaSite.forward)
 
-    
 aplicativo = qw.QApplication([])
 JonsoBrowser()
 
