@@ -1,13 +1,13 @@
-# Josvaldo2Browser
-<img alt="Página inicial" src="https://github.com/Josvaldo2/Josvaldo2Browser/assets/59576112/e07993f2-4c30-4543-b25a-04cb88dc44e2" height=220>
-<img alt="Pesquisa no Google" src="https://github.com/Josvaldo2/Josvaldo2Browser/assets/59576112/bd7f5ce3-c6e0-43bc-b8e0-72b9200bf99a" height=220>
-<img alt="Página inicial da Wikipédia" src="https://github.com/Josvaldo2/Josvaldo2Browser/assets/59576112/cc493de4-5d14-4860-bb28-7f9606c44bd0" height=220>
+# Josvaldo2 Browser
+<img alt="Página inicial" src="https://github.com/Josvaldo2/Josvaldo2Browser/assets/59576112/3039a6c7-a87e-40c2-b955-56b26fd39b26" height=220>
+<img alt="Página inicial da Wikipédia" src="https://github.com/Josvaldo2/Josvaldo2Browser/assets/59576112/52fe4ba2-26fe-4830-9c30-fccf3b52d57e" height=220>
+<img alt="Pesquisa no Google" src="https://github.com/Josvaldo2/Josvaldo2Browser/assets/59576112/ed5d3785-73a3-418e-9189-84edf1867b1f" height=220>
 
-Um navegador simples feito em python com o PyQt5 e PyQtWebEngine.  
-Inicialmente ele foi feito em 2021 como um aplicativo simples para testar o PyQt5, mas fiz algumas modificações recentemente para deixá-lo mais interessante.
+Um navegador simples feito em Python com o PyQt5 e PyQtWebEngine.  
+Feito inicialmente em 2021 como um aplicativo simples para testar o PyQt5, mas fiz algumas modificações recentemente para deixá-lo mais interessante.
 A versão antiga está na pasta `old`.
 
-Para executar o navegador, você precisa primeiro [instalar o Python no seu computador](https://www.python.org/downloads), após isso você deve instalar os módulos
+Para executar o navegador, você precisa primeiro [instalar o Python no seu computador](https://www.python.org/downloads). Em seguida, instale os módulos
 PyQt5 e PyQtWebEngine:
 
 ```bash

@@ -13,7 +13,7 @@ class JonsoBrowser(qw.QMainWindow):
         super(JonsoBrowser, self).__init__()
 
         self.janela = qw.QWidget()
-        self.janela.setWindowTitle("Josvaldo Browser")
+        self.janela.setWindowTitle("Josvaldo2 Browser")
         self.janela.setWindowIcon(QIcon(arquivoRelativo("EpicFace.png")))
 
         self.layout = qw.QVBoxLayout()
